@@ -21,6 +21,15 @@ def next_fraction(current: float, t: Thresholds) -> float:
     return min(candidates[0], cap)
 
 
+def _kind(issue_type: str) -> str:
+    return {"APPLICATION_NOT_RESPONDING": "ANR", "ANR": "ANR"}.get(issue_type, issue_type.lower())
+
+
+def _label(issue: CrashIssue) -> str:
+    parts = [p for p in (issue.location, issue.cause) if p]
+    return " in ".join(parts) if parts else issue.name
+
+
 def _pct(x: float) -> str:
     return f"{x * 100:.2f}%"
 
@@ -81,7 +90,7 @@ def recommend(
     for issue in new_issues:
         if issue.distinct_users > t.max_new_issue_users:
             hold.append(
-                f"New {issue.type.lower()} issue '{issue.cause or issue.name}' affects "
+                f"New {_kind(issue.type)} '{_label(issue)}' affects "
                 f"{issue.distinct_users} users (max {t.max_new_issue_users})."
             )
 

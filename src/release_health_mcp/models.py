@@ -59,7 +59,7 @@ class ReleaseHealth(BaseModel):
 
 class CrashIssue(BaseModel):
     name: str
-    type: str = Field(description="CRASH, ANR or NON_FATAL")
+    type: str = Field(description="CRASH, APPLICATION_NOT_RESPONDING or NON_FATAL")
     cause: str | None = None
     location: str | None = None
     distinct_users: int = 0

@@ -68,7 +68,7 @@ Add this to `~/.gemini/settings.json`:
 ## Using real Google Play data
 
 1. In Google Cloud, enable the **Google Play Developer Reporting API** and the **Google Play Android Developer API**, then create a service account and a JSON key.
-2. In Play Console → *Users and permissions*, invite the service account with **View app information (read-only)** for the apps you want. Don't reuse a CI/fastlane key that has release rights: least privilege matters, because milestone 3 adds a *separate* account for rollout changes.
+2. In Play Console → *Users and permissions*, invite the service account for the apps you want with exactly two permissions: **View app information (read-only)** (tracks and rollouts) and **View app quality information (read-only)** (Android vitals: crash/ANR rates and issues). Nothing under Releases. Don't reuse a CI/fastlane key that has release rights: least privilege matters, because milestone 3 adds a *separate* account for rollout changes.
 3. In `config.yaml`:
    ```yaml
    backend: play

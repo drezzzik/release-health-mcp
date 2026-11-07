@@ -117,3 +117,16 @@ def test_relative_change_handles_missing() -> None:
     assert relative_change(None, 0.1) is None
     assert relative_change(0.1, 0) is None
     assert relative_change(0.15, 0.1) == 0.5
+
+
+def test_new_issue_reason_uses_play_issue_fields() -> None:
+    anr = CrashIssue(
+        name="apps/p/errorIssues/1",
+        type="APPLICATION_NOT_RESPONDING",
+        cause="AppStartup.onCreate",
+        location="Input dispatching timed out",
+        distinct_users=99,
+    )
+    rec = recommend("pkg", health(), [anr], T, 0.1)
+    assert rec.decision == "hold"
+    assert "New ANR 'Input dispatching timed out in AppStartup.onCreate'" in rec.reasons[0]

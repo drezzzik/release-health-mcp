@@ -12,7 +12,7 @@
   ],
   "issues": [
     {"name": "apps/com.example.app/errorIssues/1001", "type": "CRASH", "cause": "java.lang.IllegalStateException", "location": "com.example.checkout.CartViewModel.onPaymentResult", "distinct_users": 214, "error_report_count": 388, "first_version_code": 4080, "last_version_code": 4130},
-    {"name": "apps/com.example.app/errorIssues/1002", "type": "ANR", "cause": "Input dispatching timed out", "location": "com.example.map.TileCache.load", "distinct_users": 97, "error_report_count": 120, "first_version_code": 4110, "last_version_code": 4130},
+    {"name": "apps/com.example.app/errorIssues/1002", "type": "APPLICATION_NOT_RESPONDING", "cause": "Input dispatching timed out", "location": "com.example.map.TileCache.load", "distinct_users": 97, "error_report_count": 120, "first_version_code": 4110, "last_version_code": 4130},
     {"name": "apps/com.example.app/errorIssues/1003", "type": "CRASH", "cause": "java.lang.NullPointerException", "location": "com.example.ticket.WalletAdapter.bind", "distinct_users": 12, "error_report_count": 15, "first_version_code": 4130, "last_version_code": 4130}
   ],
   "stack_traces": {

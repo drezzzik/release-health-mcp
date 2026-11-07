@@ -31,7 +31,8 @@ def _http_error(e: HttpError, package: str) -> BackendError:
     if status in (401, 403):
         return BackendError(
             f"Permission denied for {package} ({status}). Check that the service account is "
-            "invited in Play Console with 'View app information' access for this app."
+            "invited in Play Console for this app with 'View app information (read-only)' and "
+            "'View app quality information (read-only)'. New permissions can take hours to apply."
         )
     if status == 404:
         return BackendError(f"Not found for {package}: is the package name correct?")
