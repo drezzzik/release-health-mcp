@@ -1,0 +1,8 @@
+{
+  "mcpServers": {
+    "release-health": {
+      "command": "uv",
+      "args": ["run", "release-health-mcp"]
+    }
+  }
+}

@@ -1,0 +1,9 @@
+{"errorIssues": [
+  {"name": "apps/com.example.app/errorIssues/1001", "type": "CRASH", "cause": "java.lang.IllegalStateException",
+   "location": "com.example.checkout.CartViewModel.onPaymentResult", "distinctUsers": "214", "errorReportCount": "388",
+   "firstAppVersion": {"versionCode": "4080"}, "lastAppVersion": {"versionCode": "4130"},
+   "issueUri": "https://play.google.com/console/developers/x/app/y/vitals/crashes/1001"},
+  {"name": "apps/com.example.app/errorIssues/1003", "type": "CRASH", "cause": "java.lang.NullPointerException",
+   "location": "com.example.ticket.WalletAdapter.bind", "distinctUsers": "12", "errorReportCount": "15",
+   "firstAppVersion": {"versionCode": "4130"}, "lastAppVersion": {"versionCode": "4130"}}
+]}

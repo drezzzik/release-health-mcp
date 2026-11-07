@@ -1,0 +1,18 @@
+# Copy to config.yaml (git-ignored) and adjust. Relative paths are resolved from this file.
+# Env overrides: RELEASE_HEALTH_CONFIG, RELEASE_HEALTH_BACKEND, RELEASE_HEALTH_READ_KEY,
+# RELEASE_HEALTH_THRESHOLDS.
+
+backend: fixture            # fixture (canned demo data) | play (Google Play APIs)
+
+apps:                        # alias -> Play package name
+  demo: com.example.app
+  regressed: com.example.regressed
+  # A white-label setup with several Play listings:
+  # brand-a: com.example.brand.a
+  # brand-b: com.example.brand.b
+default_app: demo
+
+read_key_file: ~/.config/release-health/play-read-only.json   # read-only service account
+thresholds_file: thresholds.yaml
+health_window_days: 7        # window for crash/ANR rates and top crashes
+issues_window_days: 60       # lookback used to decide whether an issue is "new"

@@ -1,0 +1,17 @@
+{
+  "releases": [
+    {"track": "production", "name": "5.21.0", "version_codes": [5210], "status": "inProgress", "user_fraction": 0.05},
+    {"track": "production", "name": "5.20.1", "version_codes": [5201], "status": "completed"}
+  ],
+  "metrics": [
+    {"version_code": 5210, "user_perceived_crash_rate": 0.0081, "crash_rate": 0.0112, "user_perceived_anr_rate": 0.0024, "anr_rate": 0.0038, "user_days": 6400, "start_date": "2026-10-30", "end_date": "2026-11-06"},
+    {"version_code": 5201, "user_perceived_crash_rate": 0.0045, "crash_rate": 0.0068, "user_perceived_anr_rate": 0.0022, "anr_rate": 0.0035, "user_days": 288000, "start_date": "2026-10-30", "end_date": "2026-11-06"}
+  ],
+  "issues": [
+    {"name": "apps/com.example.regressed/errorIssues/2001", "type": "CRASH", "cause": "java.lang.IllegalArgumentException", "location": "com.example.login.SsoRedirectActivity.onCreate", "distinct_users": 143, "error_report_count": 201, "first_version_code": 5210, "last_version_code": 5210},
+    {"name": "apps/com.example.regressed/errorIssues/2002", "type": "CRASH", "cause": "java.lang.OutOfMemoryError", "location": "com.example.gallery.ImageDecoder.decode", "distinct_users": 61, "error_report_count": 70, "first_version_code": 5100, "last_version_code": 5210}
+  ],
+  "stack_traces": {
+    "apps/com.example.regressed/errorIssues/2001": "java.lang.IllegalArgumentException: Missing redirect_uri\n  at com.example.login.SsoRedirectActivity.onCreate(SsoRedirectActivity.kt:39)"
+  }
+}

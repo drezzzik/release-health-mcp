@@ -1,0 +1,23 @@
+{
+  "releases": [
+    {"track": "production", "name": "4.13.0", "version_codes": [4130], "status": "inProgress", "user_fraction": 0.10},
+    {"track": "production", "name": "4.12.2", "version_codes": [4122], "status": "completed"},
+    {"track": "beta", "name": "4.14.0-beta1", "version_codes": [4140], "status": "completed"},
+    {"track": "internal", "name": "4.14.0-rc", "version_codes": [4141], "status": "completed"}
+  ],
+  "metrics": [
+    {"version_code": 4130, "user_perceived_crash_rate": 0.0041, "crash_rate": 0.0063, "user_perceived_anr_rate": 0.0019, "anr_rate": 0.0031, "user_days": 18240, "start_date": "2026-10-30", "end_date": "2026-11-06"},
+    {"version_code": 4122, "user_perceived_crash_rate": 0.0039, "crash_rate": 0.0060, "user_perceived_anr_rate": 0.0021, "anr_rate": 0.0034, "user_days": 402310, "start_date": "2026-10-30", "end_date": "2026-11-06"},
+    {"version_code": 4110, "user_perceived_crash_rate": 0.0044, "crash_rate": 0.0067, "user_perceived_anr_rate": 0.0023, "anr_rate": 0.0036, "user_days": 9120, "start_date": "2026-10-30", "end_date": "2026-11-06"}
+  ],
+  "issues": [
+    {"name": "apps/com.example.app/errorIssues/1001", "type": "CRASH", "cause": "java.lang.IllegalStateException", "location": "com.example.checkout.CartViewModel.onPaymentResult", "distinct_users": 214, "error_report_count": 388, "first_version_code": 4080, "last_version_code": 4130},
+    {"name": "apps/com.example.app/errorIssues/1002", "type": "ANR", "cause": "Input dispatching timed out", "location": "com.example.map.TileCache.load", "distinct_users": 97, "error_report_count": 120, "first_version_code": 4110, "last_version_code": 4130},
+    {"name": "apps/com.example.app/errorIssues/1003", "type": "CRASH", "cause": "java.lang.NullPointerException", "location": "com.example.ticket.WalletAdapter.bind", "distinct_users": 12, "error_report_count": 15, "first_version_code": 4130, "last_version_code": 4130}
+  ],
+  "stack_traces": {
+    "apps/com.example.app/errorIssues/1001": "java.lang.IllegalStateException: Cart already finalized\n  at com.example.checkout.CartViewModel.onPaymentResult(CartViewModel.kt:212)\n  at com.example.checkout.PaymentFragment$onResult$1.invoke(PaymentFragment.kt:88)",
+    "apps/com.example.app/errorIssues/1002": "\"main\" tid=1 Blocked\n  at com.example.map.TileCache.load(TileCache.kt:54)\n  at com.example.map.MapFragment.onResume(MapFragment.kt:131)",
+    "apps/com.example.app/errorIssues/1003": "java.lang.NullPointerException: Attempt to invoke virtual method 'String Ticket.getTitle()' on a null object reference\n  at com.example.ticket.WalletAdapter.bind(WalletAdapter.kt:47)"
+  }
+}

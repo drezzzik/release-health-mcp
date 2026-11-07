@@ -1,0 +1,6 @@
+{"kind": "androidpublisher#tracksListResponse", "tracks": [
+  {"track": "production", "releases": [
+    {"name": "4.13.0", "versionCodes": ["4130"], "status": "inProgress", "userFraction": 0.1},
+    {"name": "4.12.2", "versionCodes": ["4122"], "status": "completed"}]},
+  {"track": "internal", "releases": [{"name": "4.14.0-rc", "versionCodes": ["4141"], "status": "completed"}]}
+]}

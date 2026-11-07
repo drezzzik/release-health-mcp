@@ -1,0 +1,13 @@
+# Copy to thresholds.yaml. Rates are fractions: 0.0109 = 1.09% of daily users.
+defaults:
+  max_user_perceived_crash_rate: 0.0109   # Google Play bad-behavior threshold
+  max_user_perceived_anr_rate: 0.0047     # Google Play bad-behavior threshold
+  max_relative_increase: 0.25             # hold if +25% or worse vs previous version
+  min_user_days: 500                      # hold if the sample is smaller than this
+  max_new_issue_users: 50                 # hold if one new issue affects more users
+  max_step_pp: 0.20                       # never suggest more than +20 percentage points
+  rollout_steps: [0.01, 0.05, 0.10, 0.20, 0.50, 1.0]
+
+apps:                                     # per-package overrides
+  com.example.regressed:
+    max_relative_increase: 0.15

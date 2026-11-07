@@ -1,0 +1,3 @@
+{"errorReports": [{"name": "apps/com.example.app/errorReports/abc", "type": "CRASH",
+  "reportText": "java.lang.IllegalStateException: Cart already finalized\n  at com.example.checkout.CartViewModel.onPaymentResult(CartViewModel.kt:212)",
+  "appVersion": {"versionCode": "4130"}}]}

@@ -1,0 +1,3 @@
+{"name": "apps/com.example.app/anrRateMetricSet", "freshnessInfo": {"freshnesses": [
+  {"aggregationPeriod": "HOURLY", "latestEndTime": {"year": 2026, "month": 11, "day": 7, "hours": 2, "timeZone": {"id": "UTC"}}},
+  {"aggregationPeriod": "DAILY", "latestEndTime": {"year": 2026, "month": 11, "day": 6, "timeZone": {"id": "America/Los_Angeles"}}}]}}

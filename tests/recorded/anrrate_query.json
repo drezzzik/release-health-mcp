@@ -1,0 +1,7 @@
+{"rows": [
+  {"aggregationPeriod": "DAILY", "startTime": {"year": 2026, "month": 11, "day": 6},
+   "dimensions": [{"dimension": "versionCode", "int64Value": "4130"}],
+   "metrics": [{"metric": "userPerceivedAnrRate", "decimalValue": {"value": "0.002"}},
+               {"metric": "anrRate", "decimalValue": {"value": "0.003"}},
+               {"metric": "distinctUsers", "decimalValue": {"value": "4000"}}]}
+]}

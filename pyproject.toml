@@ -1,0 +1,53 @@
+[project]
+name = "release-health-mcp"
+version = "0.1.0"
+description = "MCP server that gives AI agents Google Play crash/ANR health per release and recommends expand, hold or halt for staged rollouts."
+readme = "README.md"
+authors = [
+    { name = "drezzzik", email = "54620131+drezzzik@users.noreply.github.com" }
+]
+requires-python = ">=3.12"
+dependencies = [
+    "google-api-python-client>=2.201.0",
+    "google-auth>=2.62.1",
+    "mcp[cli]>=2.3.0",
+    "pydantic>=2.14.3",
+    "pyyaml>=6.0.3",
+]
+
+[project.scripts]
+release-health-mcp = "release_health_mcp:main"
+
+[build-system]
+requires = ["uv_build>=0.13.7,<0.14.0"]
+build-backend = "uv_build"
+
+[dependency-groups]
+dev = [
+    "anyio>=4.16.0",
+    "mypy>=2.4.1",
+    "pytest>=9.2.0",
+    "pytest-asyncio>=1.4.1.post1",
+    "ruff>=0.17.4",
+    "types-pyyaml>=6.0.12.20261103",
+]
+
+[tool.ruff]
+line-length = 100
+target-version = "py312"
+
+[tool.ruff.lint]
+select = ["E", "F", "W", "I", "B", "UP", "SIM", "RUF"]
+
+[tool.mypy]
+python_version = "3.12"
+strict = true
+plugins = ["pydantic.mypy"]
+
+[[tool.mypy.overrides]]
+module = ["googleapiclient.*"]
+ignore_missing_imports = true
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+asyncio_default_fixture_loop_scope = "function"

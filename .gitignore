@@ -1,0 +1,24 @@
+# Python-generated files
+__pycache__/
+*.py[oc]
+build/
+dist/
+wheels/
+*.egg-info
+
+# Virtual environments
+.venv
+
+# local config and credentials
+config.yaml
+thresholds.yaml
+*.json
+!src/release_health_mcp/fixtures/*.json
+!tests/recorded/*.json
+.mypy_cache/
+.ruff_cache/
+.pytest_cache/
+!.mcp.json
+
+# private planning notes
+Release Health MCP Server – Project Plan.md

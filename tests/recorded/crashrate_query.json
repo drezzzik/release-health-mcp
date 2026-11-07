@@ -1,0 +1,17 @@
+{"rows": [
+  {"aggregationPeriod": "DAILY", "startTime": {"year": 2026, "month": 11, "day": 5},
+   "dimensions": [{"dimension": "versionCode", "int64Value": "4130"}],
+   "metrics": [{"metric": "userPerceivedCrashRate", "decimalValue": {"value": "0.004"}},
+               {"metric": "crashRate", "decimalValue": {"value": "0.006"}},
+               {"metric": "distinctUsers", "decimalValue": {"value": "1000"}}]},
+  {"aggregationPeriod": "DAILY", "startTime": {"year": 2026, "month": 11, "day": 6},
+   "dimensions": [{"dimension": "versionCode", "int64Value": "4130"}],
+   "metrics": [{"metric": "userPerceivedCrashRate", "decimalValue": {"value": "0.007"}},
+               {"metric": "crashRate", "decimalValue": {"value": "0.009"}},
+               {"metric": "distinctUsers", "decimalValue": {"value": "3000"}}]},
+  {"aggregationPeriod": "DAILY", "startTime": {"year": 2026, "month": 11, "day": 6},
+   "dimensions": [{"dimension": "versionCode", "int64Value": "4122"}],
+   "metrics": [{"metric": "userPerceivedCrashRate", "decimalValue": {"value": "0.0039"}},
+               {"metric": "crashRate", "decimalValue": {"value": "0.006"}},
+               {"metric": "distinctUsers", "decimalValue": {"value": "50000"}}]}
+]}
