@@ -3,6 +3,8 @@ name = "release-health-mcp"
 version = "0.1.0"
 description = "MCP server that gives AI agents Google Play crash/ANR health per release and recommends expand, hold or halt for staged rollouts."
 readme = "README.md"
+license = "MIT"
+license-files = ["LICENSE"]
 authors = [
     { name = "drezzzik", email = "54620131+drezzzik@users.noreply.github.com" }
 ]

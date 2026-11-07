@@ -1,5 +1,8 @@
 # Release Health MCP Server
 
+[![CI](https://github.com/drezzzik/release-health-mcp/actions/workflows/ci.yml/badge.svg)](https://github.com/drezzzik/release-health-mcp/actions/workflows/ci.yml)
+[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
+
 An [MCP](https://modelcontextprotocol.io) server that lets any AI agent (Claude Code, Claude Desktop, Gemini CLI, …) answer one question:
 
 > **Is this release healthy enough to expand the rollout?**
@@ -121,3 +124,6 @@ src/release_health_mcp/
 
 ## Roadmap
 See [docs/ROADMAP.md](docs/ROADMAP.md): approval-gated `propose_rollout_change` (human approval, hard limits, audit log, dry-run by default), then the showcase, iOS, remote HTTP and tracing.
+
+## License
+MIT, see [LICENSE](LICENSE).
